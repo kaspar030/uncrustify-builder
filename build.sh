@@ -16,4 +16,5 @@ mkdir build
 cd build
 cmake .. -DCMAKE_FIND_LIBRARY_SUFFIXES=".a" -DCMAKE_EXE_LINKER_FLAGS=" -static"
 make
+strip uncrustify
 mv uncrustify /out
