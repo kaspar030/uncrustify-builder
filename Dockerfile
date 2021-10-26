@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu as builder
 
 LABEL maintainer="Kaspar Schleiser <kaspar@schleiser.de>"
 
@@ -15,7 +15,7 @@ RUN \
         build-essential \
         ca-certificates \
         cmake \
-        python \
+        python3 \
         wget \
         && \
     echo 'Cleaning up installation files' >&2 && \
