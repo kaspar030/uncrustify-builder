@@ -26,4 +26,9 @@ RUN chmod a+rwx /build
 COPY build.sh /build
 
 WORKDIR /build
-ENTRYPOINT ["/bin/sh", "build.sh"]
+RUN ["./build.sh" ]
+
+FROM ubuntu
+LABEL maintainer="Kaspar Schleiser <kaspar@schleiser.de>"
+COPY --from=builder /build/uncrustify /usr/bin/uncrustify
+ENTRYPOINT [ "/usr/bin/uncrustify" ]
