@@ -2,7 +2,7 @@
 
 set -ex
 
-URL=${1:-https://github.com/uncrustify/uncrustify/archive/uncrustify-0.73.0.tar.gz}
+URL=${1:-https://github.com/uncrustify/uncrustify/archive/uncrustify-0.77.1.tar.gz}
 
 wget $URL
 tar -xzf $(basename $URL)
